@@ -1,0 +1,87 @@
+.pokedex-captured-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 30px;
+  }
+  
+  .pokedex-captured-card {
+    background: rgba(255, 255, 255, 0.07);
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.15);
+    text-align: center;
+    width: 120px;
+  }
+  
+  .pokedex-captured-img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    transition: transform 0.3s, filter 0.3s;
+    cursor: pointer;
+  }
+  
+  .pokedex-captured-img.healing {
+    transform: scale(1.2);
+    filter: brightness(1.5) drop-shadow(0 0 6px #00ff99);
+  }
+  
+  .pokedex-captured-card h5 {
+    margin: 8px 0 4px;
+    font-size: 14px;
+  }
+  
+  .pokedex-captured-card p {
+    margin: 4px 0;
+    font-size: 12px;
+  }
+  
+  .return-button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    cursor: pointer;
+  }
+  
+  .buttons-group {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    justify-content: center;
+  }
+  
+  .heal-button {
+    background: linear-gradient(to right, #00ff99, #00cc66);
+    color: black;
+    font-weight: bold;
+    font-size: 12px;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 10px;
+    cursor: pointer;
+  }
+  
+  .heal-button:hover {
+    transform: scale(1.05);
+  }
+  
+  .delete-button {
+    background: linear-gradient(to right, #ff4e50, #f9d423);
+    color: black;
+    font-weight: bold;
+    font-size: 12px;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 10px;
+    cursor: pointer;
+  }
+  
+  .delete-button:hover {
+    transform: scale(1.05);
+  }
+  
