@@ -1,0 +1,182 @@
+.pokemon-card {
+  border: 3px solid gold;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+  color: white;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  width: 220px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+
+  /* Dégradé de type */
+  background: var(--type-gradient, linear-gradient(to bottom, royalblue, navy));
+  background-blend-mode: overlay;
+}
+
+.pokemon-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--glitter-image);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: screen;
+  opacity: 0.6;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.pokemon-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.pokemon-card-container {
+  margin: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.pokemon-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+.pokemon-name {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: yellow;
+  text-shadow: 1px 1px 2px black;
+}
+
+.pokemon-image {
+  width: 160px;
+  height: 160px;
+  border: 2px solid black;
+  border-radius: 8px;
+  background-color: white;
+  padding: 5px;
+}
+
+.pokemon-types-container {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.pokemon-type {
+  padding: 3px 7px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: bold;
+  border: 1px solid white;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px black;
+}
+
+/* Stats */
+.pokemon-stats-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 6px;
+  border-radius: 6px;
+  width: 80%;
+  margin-top: 8px;
+}
+
+/* Buttons */
+.pokemon-button {
+  font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 2px solid black;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+  margin-top: 8px;
+}
+.pokemon-button.attack {
+  background: linear-gradient(to bottom, yellow, orange);
+  color: black;
+}
+.pokemon-button.attack:hover {
+  background: linear-gradient(to bottom, gold, darkorange);
+  transform: scale(1.05);
+}
+.pokemon-button.edit {
+  background: linear-gradient(to bottom, lightblue, dodgerblue);
+  color: white;
+}
+.pokemon-button.edit:hover {
+  background: linear-gradient(to bottom, deepskyblue, navy);
+  transform: scale(1.05);
+}
+.pokemon-button.delete {
+  background: linear-gradient(to bottom, crimson, darkred);
+  color: white;
+}
+.pokemon-button.delete:hover {
+  background: linear-gradient(to bottom, firebrick, black);
+  transform: scale(1.05);
+}
+
+/* Réduction du logo dans le header */
+.header-logo {
+  height: 300px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  margin-right: 12px;
+  margin-bottom: -52px;
+}
+.header-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Embellissement de la search bar */
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+.search-bar {
+  padding: 10px 12px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+  width: 180px;
+}
+
+.search-bar::placeholder {
+  color: #ccc;
+}
+
+.search-bar-container button {
+  padding: 10px 14px;
+  background: linear-gradient(to bottom, silver, #ccc);
+  border: none;
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.search-bar-container button:hover {
+  background: linear-gradient(to bottom, white, silver);
+}
